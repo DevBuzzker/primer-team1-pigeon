@@ -176,3 +176,74 @@ button {
     margin-bottom: 60px;
   }
 }
+
+/* Carousel Section Styling */
+.carousel-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.carousel-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 24px;
+  color: #333;
+}
+
+.carousel-container {
+  overflow: hidden;
+  background: white;
+  padding: 30px;
+}
+
+.carousel {
+  display: flex;
+  gap: 30px;
+  animation: scroll 30s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 150px;
+}
+
+.company-logo {
+  width: 150px;
+  height: 100px;
+  background: #e0e0e0;
+  border: 2px solid #ccc;
+  position: relative;
+}
+
+.company-logo::before,
+.company-logo::after {
+  content: '';
+  position: absolute;
+  background: #ccc;
+}
+
+.company-logo::before {
+  width: 2px;
+  height: 141px;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.company-logo::after {
+  width: 2px;
+  height: 141px;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-1800px);
+  }
+}
