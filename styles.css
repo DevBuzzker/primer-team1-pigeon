@@ -48,3 +48,67 @@ button {
     cursor: pointer;
     padding: 10px 10px;
 }
+
+.footer {
+    background-color: #f0f0f0;
+    width: 100%;
+    padding: 60px 20px;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-brand {
+    font-size: 32px;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.footer-nav a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #666;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #999;
+}
