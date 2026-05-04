@@ -15,9 +15,33 @@ header {
     top: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    /* this fixes the issue with the sticky header overlapping content */
+    scroll-margin-top: 55px;
+}
+
 .nav {
     display: flex;
     gap: 5px;
+}
+
+.nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    background-color: #55606a;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.nav a:hover {
+    background-color: #4a545f;
 }
 
 button {
