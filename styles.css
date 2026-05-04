@@ -90,7 +90,7 @@ section {
   border-color: rgba(150, 100, 255, 0.4);
   color: #fff;
   box-shadow: 0 0 12px rgba(100, 60, 255, 0.2);
-}
+ }
 
 button {
   cursor: pointer;
@@ -168,25 +168,60 @@ button {
 /* Features Section Styling */
 #features-section {
   padding: 80px 40px;
-  background-color: #f0f0f0;
+  background: transparent;
   text-align: center;
+  position: relative;
+}
 
+#features-section::before,
+#features-section::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 180, 255, 0.5) 50%, transparent);
+  box-shadow: 0 0 18px 5px rgba(0, 180, 255, 0.15);
+  pointer-events: none;
+}
+
+#features-section::before {
+  top: 0;
+}
+
+#features-section::after {
+  bottom: 0;
+}
+
+#features-section h1 {
+  font-size: 48px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+#features-section > p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 60px;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px 40px;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .feature-icon {
-  width: 120px;
-  height: 120px;
-  background-color: #fff;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+  background: radial-gradient(circle, rgba(0, 180, 255, 0.4), rgba(0, 80, 160, 0.2));
+  border: 1px solid rgba(0, 180, 255, 0.35);
+  box-shadow: 0 0 20px rgba(0, 180, 255, 0.25);
 }
 
 .feature-card {
@@ -194,7 +229,27 @@ button {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 32px rgba(0, 180, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.feature-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
 
 /* Reasons Section Styling */
 .reasons-section {
