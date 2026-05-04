@@ -231,7 +231,44 @@ button {
   margin: 0 auto;
 }
 
+/* Video Section */
+.video {
+  padding: 60px 20px;
+}
+
+.video-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.video-wrapper {
+  width: 100%;
+}
+
+.video-placeholder img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
 @media (max-width: 768px) {
+  .video {
+    padding: 40px 16px;
+  }
+
+  .video-title {
+    font-size: 22px;
+  }
+
   .reasons-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 30px;
@@ -243,24 +280,54 @@ button {
   }
 }
 
+@media (max-width: 480px) {
+  .video-title {
+    font-size: 18px;
+  }
+}
+
 /* Carousel Section Styling */
 .carousel-section {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 40px 20px;
+  position: relative;
+}
+
+.carousel-section::before,
+.carousel-section::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 180, 255, 0.5) 50%, transparent);
+  box-shadow: 0 0 18px 5px rgba(0, 180, 255, 0.2);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.carousel-section::before {
+  top: 0;
+}
+
+.carousel-section::after {
+  bottom: 0;
 }
 
 .carousel-section h2 {
   text-align: center;
   margin-bottom: 40px;
   font-size: 24px;
-  color: #333;
+  color: #fff;
 }
 
 .carousel-container {
   overflow: hidden;
-  background: white;
+  background: transparent;
   padding: 30px;
+}
+
+.carousel-container:hover .carousel {
+  animation-play-state: paused;
 }
 
 .carousel {
@@ -271,37 +338,54 @@ button {
 
 .carousel-item {
   flex: 0 0 150px;
-}
-
-.company-logo {
-  width: 150px;
-  height: 100px;
-  background: #e0e0e0;
-  border: 2px solid #ccc;
   position: relative;
 }
 
-.company-logo::before,
-.company-logo::after {
-  content: '';
+.carousel-item::after {
+  content: attr(data-company);
   position: absolute;
-  background: #ccc;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
 }
 
-.company-logo::before {
-  width: 2px;
-  height: 141px;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
+.carousel-item:hover::after {
+  opacity: 1;
 }
 
-.company-logo::after {
-  width: 2px;
-  height: 141px;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-45deg);
+.carousel-item {
+  flex: 0 0 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 10px;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carousel-item:hover .company-logo {
+  opacity: 1;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
 }
 
 @keyframes scroll {
