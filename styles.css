@@ -81,9 +81,9 @@ button {
 }
 
 .footer {
-  background-color: #f0f0f0;
+  background-color: #0a0f1e;
   width: 100%;
-  padding: 60px 20px;
+  padding: 30px 20px;
 }
 
 .footer-container {
@@ -92,13 +92,13 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .footer-brand {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: normal;
-  color: #333;
+  color: #fff;
   text-align: center;
 }
 
@@ -109,14 +109,14 @@ button {
 }
 
 .footer-nav a {
-  font-size: 18px;
-  color: #333;
+  font-size: 16px;
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-nav a:hover {
-  color: #666;
+  color: #aaa;
 }
 
 .social-icons {
@@ -126,10 +126,10 @@ button {
 }
 
 .social-icon {
-  width: 60px;
-  height: 60px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background-color: #bbb;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,13 +139,13 @@ button {
 }
 
 .social-icon img {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
 }
 
 .social-icon:hover {
-  background-color: #999;
+  background-color: #ddd;
 }
 
 /* Features Section Styling */
