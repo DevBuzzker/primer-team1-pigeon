@@ -97,18 +97,33 @@ button {
   cursor: pointer;
   padding: 10px 10px;
 }
+
 /* VIDEO */
 .video {
   background: var(--gray-mid);
   text-align: center;
-  padding: 60px 0;
+  padding: 80px 0; /* etwas mehr Raum */
 }
 
-.video-box {
-  width: auto;
-  height: 250px;
+/* Überschrift näher zur Box */
+.video-title {
+  margin-bottom: 20px;
+}
+
+/* Wrapper für sauberes Scaling */
+.video-wrapper {
+  max-width: 900px;   /* größer als vorher */
+  margin: 0 auto;
+}
+
+/* Video Box */
+.video-box,
+.video-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* wichtig für echtes Video-Format */
   background: #ffffff;
-  margin: 30px auto 0;
+  border-radius: 12px;
+  display: block;
 }
 
 
