@@ -1,3 +1,9 @@
+:root {
+  --gray-dark: #8f8f8f;
+  --gray-mid: #bdbdbd;
+  --gray-light: #e5e5e5;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -61,6 +67,49 @@ html {
   scroll-behavior: smooth;
 }
 
+/* HERO */
+.hero {
+  background: var(--gray-mid);
+  padding: 50px 0;
+}
+
+.hero .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-grid {
+  display: grid;
+
+  
+  grid-template-columns: minmax(350px, 500px) 300px;
+
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Cards */
+.hero-card,
+.demo-card {
+  background: #ddd;
+  padding: 30px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-card h2 {
+  margin: 15px 0;
+}
+
+.demo-card {
+  border-radius: 20px;
+  text-align: center;
+}
+
 section {
   /* this fixes the issue with the sticky header overlapping content */
   scroll-margin-top: 60px;
@@ -95,6 +144,59 @@ section {
 button {
   cursor: pointer;
   padding: 10px 10px;
+}
+
+/* VIDEO */
+.video {
+  background: var(--gray-mid);
+  text-align: center;
+  padding: 80px 0; /* etwas mehr Raum */
+}
+
+/* Überschrift näher zur Box */
+.video-title {
+  margin-bottom: 20px;
+}
+
+/* Wrapper für sauberes Scaling */
+.video-wrapper {
+  max-width: 900px;   /* größer als vorher */
+  margin: 0 auto;
+}
+
+/* Video Box */
+.video-box,
+.video-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* wichtig für echtes Video-Format */
+  background: #ffffff;
+  border-radius: 12px;
+  display: block;
+}
+
+
+/* PRICING */
+.pricing {
+  background: var(--gray-mid);
+  text-align: center;
+  padding: 60px 0;
+}
+
+.price-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  display: flex;
+  width: 180px;
+  height: 220px;
+  background: #ffffff;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .footer {
