@@ -69,23 +69,18 @@ html {
   scroll-behavior: smooth;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
-  background: var(--gray-mid);
-  padding: 50px 0;
+  background: transparent;
+  padding: 80px 40px;
 }
 
-.hero .container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
+/* Layout */
 .hero-grid {
   display: grid;
-
-  
-  grid-template-columns: minmax(350px, 500px) 300px;
-
+  grid-template-columns: minmax(400px, 520px) 320px;
   gap: 40px;
   justify-content: center;
   align-items: stretch;
@@ -94,22 +89,143 @@ html {
 /* Cards */
 .hero-card,
 .demo-card {
-  background: #ddd;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+
   padding: 30px;
+  color: #fff;
+
   height: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.hero-card h2 {
-  margin: 15px 0;
+/* Text */
+.hero-card small {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.demo-card {
-  border-radius: 20px;
+.hero-card h2,
+.hero-card p,
+.demo-card h3,
+.demo-card p {
+  color: #fff;
+}
+
+/* Hover */
+.hero-card:hover,
+.demo-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(100, 60, 255, 0.2);
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+.video {
+  background: transparent;
+  padding: 100px 40px;
   text-align: center;
+}
+
+.video-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.video-title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* Wrapper */
+.video-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Video */
+.video-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  box-shadow: 0 10px 40px rgba(0, 180, 255, 0.15);
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* =========================
+   PRICING
+========================= */
+.pricing {
+  background: transparent;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+/* Layout */
+.price-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+
+  /* nebeneinander erzwingen */
+  flex-wrap: nowrap;
+}
+
+/* Cards */
+.card {
+  width: 220px;
+  height: 260px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+
+  color: #fff;
+
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Text */
+.card h3,
+.card p {
+  color: #fff;
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 180, 255, 0.2);
 }
 
 section {
@@ -150,57 +266,6 @@ button {
 }
 
 /* VIDEO */
-.video {
-  background: var(--gray-mid);
-  text-align: center;
-  padding: 80px 0; /* etwas mehr Raum */
-}
-
-/* Überschrift näher zur Box */
-.video-title {
-  margin-bottom: 20px;
-}
-
-/* Wrapper für sauberes Scaling */
-.video-wrapper {
-  max-width: 900px;   /* größer als vorher */
-  margin: 0 auto;
-}
-
-/* Video Box */
-.video-box,
-.video-wrapper iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;   /* wichtig für echtes Video-Format */
-  background: #ffffff;
-  border-radius: 12px;
-  display: block;
-}
-
-
-/* PRICING */
-.pricing {
-  background: var(--gray-mid);
-  text-align: center;
-  padding: 60px 0;
-}
-
-.price-cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.card {
-  display: flex;
-  width: 180px;
-  height: 220px;
-  background: #ffffff;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-}
 
 .footer {
   background-color: #0a0f1e;
