@@ -1,3 +1,9 @@
+:root {
+  --gray-dark: #8f8f8f;
+  --gray-mid: #bdbdbd;
+  --gray-light: #e5e5e5;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +24,35 @@ header {
 html {
   scroll-behavior: smooth;
 }
+
+/* HERO */
+.hero {
+  background: var(--gray-mid);
+  padding: 50px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.hero-card {
+  background: #ddd;
+  padding: 30px;
+}
+
+.hero-card h2 {
+  margin: 15px 0;
+}
+
+.demo-card {
+  background: #ddd;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center; 
+}  
 
 section {
   /* this fixes the issue with the sticky header overlapping content */
@@ -47,6 +82,44 @@ section {
 button {
   cursor: pointer;
   padding: 10px 10px;
+}
+/* VIDEO */
+.video {
+  background: var(--gray-mid);
+  text-align: center;
+  padding: 60px 0;
+}
+
+.video-box {
+  width: auto;
+  height: 250px;
+  background: #ffffff;
+  margin: 30px auto 0;
+}
+
+
+/* PRICING */
+.pricing {
+  background: var(--gray-mid);
+  text-align: center;
+  padding: 60px 0;
+}
+
+.price-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  display: flex;
+  width: 180px;
+  height: 220px;
+  background: #ffffff;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .footer {
